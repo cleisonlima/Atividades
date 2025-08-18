@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinhação</title>
+    <style>
+        body{
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1{
+            color:#2c3e50
+        }
+        p{
+            font-size: 18px;
+        }
+        input{
+            padding: 8px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            width: 80px;
+            text-align: center;
+        }
+        button{
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;    
+        }
+        button:hover{
+            background-color: #0a4369;
+        }
+        #resultado{
+            margin-top: 20px;
+            font-weight: bold;
+            color: #135597;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Jogo de Adivinhação</h1>
+    <p>Tente adivinhar o número entre 1 e 10</p>
+    <input type="number" id="palpite" min="1" max="10">
+    <button onclick="checarPalpite()">Adivinhar</button>
+    <p id="resultado"></p>
+    <script>
+        let numeroSecreto = Math.floor(Math.random()*10)+1;
+        function checarPalpite(){
+            let chute = parseInt(document.getElementById("palpite").value);
+            if(chute===numeroSecreto){
+                document.getElementById("resultado").innerText="Parabéns! Você acertou";
+            }else{
+                document.getElementById("resultado").innerText="Errou! Tente novamente"
+            }
+        }
+    </script>
+</body>
+</html>
