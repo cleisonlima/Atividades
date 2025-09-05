@@ -114,6 +114,35 @@ Este guia reúne os **principais comandos** para React.js, React Native, Angular
 const express = require('express');
 const app = express();
 const port = 3000;
+```
+
+# Instalação do Node.js no Windows com Scoop
+
+Este guia mostra como instalar o Node.js, Yarn e Git utilizando o gerenciador de pacotes **Scoop** no Windows.
+
+---
+
+## Passo 1: Acessar o site do Scoop
+
+Visite o site oficial do Scoop para instruções de instalação: [https://scoop.sh](https://scoop.sh)
+
+---
+
+## Passo 2: Instalar o Scoop (via PowerShell)
+
+Abra o **PowerShell** como administrador e cole os comandos fornecidos no site do Scoop.
+
+---
+
+## Passo 3: Instalar as dependências
+
+Execute os seguintes comandos **um por vez** no PowerShell:
+
+```powershell
+scoop install git
+scoop install yarn
+scoop install nodejs-lts
+
 
 app.get('/', (req, res) => res.send('Olá Mundo!'));
 
